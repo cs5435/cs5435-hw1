@@ -21,12 +21,13 @@ def attempt_login(username, password):
                     })
     return response.status_code == codes.ok
 
+# should return a list of credential pairs (tuples) that can successfully login
 def credential_stuffing_attack(creds):
     pass
 
 def main():
     creds = load_breach(PLAINTEXT_BREACH_PATH)
-    credential_stuffing_attack(creds)
+    print(credential_stuffing_attack(creds))
 
 if __name__ == "__main__":
     main()
