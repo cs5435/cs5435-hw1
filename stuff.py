@@ -21,8 +21,8 @@ def attempt_login(username, password):
                     })
     return response.status_code == codes.ok
 
-# should return a list of credential pairs (tuples) that can successfully login
 def credential_stuffing_attack(creds):
+    # TODO: return a list of credential pairs (tuples) that can successfully login
     pass
 
 def main():

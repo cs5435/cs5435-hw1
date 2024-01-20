@@ -1,3 +1,4 @@
+from app.util.hash import PERFORMANCE_STATS
 from bottle import (
     get,
     post,
@@ -61,4 +62,6 @@ def do_logout(db, session):
     response.delete_cookie("session")
     return redirect("/login")
 
-
+@get('/stats')
+def stats():
+    return PERFORMANCE_STATS
