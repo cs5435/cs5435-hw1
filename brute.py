@@ -16,11 +16,12 @@ def load_common_passwords():
     return pws
 
 def brute_force_attack(target_hash, target_salt):
+    # TODO: return cracked password if one is found or None otherwise
     pass
 
 def main():
     salted_creds = load_breach(SALTED_BREACH_PATH)
-    brute_force_attack(salted_creds[0][1], salted_creds[0][2])
+    print(brute_force_attack(salted_creds[0][1], salted_creds[0][2]))
 
 if __name__ == "__main__":
     main()
