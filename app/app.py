@@ -32,4 +32,10 @@ def run_server():
         engine,
         keyword='db',
     ))
-    run(host='0.0.0.0', port=8080)
+    for i in range(8080, 9000):
+        print(f'Trying port {i}')
+        try:
+            run(host='0.0.0.0', port=i)
+            break
+        except:
+            print(f'Port {i} is busy')
