@@ -1,7 +1,9 @@
 from csv import reader
 from requests import post, codes
 
-LOGIN_URL = "http://localhost:8080/login"
+with open('app/PORT_CONFIG.txt') as f:
+    PORT = int(f.read().strip())
+LOGIN_URL = f"http://localhost:{PORT}/login"
 
 PLAINTEXT_BREACH_PATH = "app/scripts/breaches/plaintext_breach.csv"
 
